@@ -1,0 +1,71 @@
+@import "src/designSystem/css/theme.scss";
+
+.ProseMirror {
+  border: 2px solid $colorBorder;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+
+  div[contenteditable="true"]:focus {
+    outline: none;
+    border: none;
+  }
+
+  ol,
+  ul {
+    padding: 0 1rem;
+  }
+}
+
+.menu-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+
+  .modifier-btn {
+    background-color: $white;
+    color: $colorTextPrimary;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid $colorBorder;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    position: relative;
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $colorBorder;
+
+      &:hover {
+        background-color: $colorBorder;
+      }
+    }
+
+    &:hover {
+      background-color: $colorBgMenuActive;
+    }
+
+    &.active {
+      background-color: $colorTextPrimary;
+      color: $white;
+
+      &:disabled {
+        background-color: $colorBorder;
+        color: $colorTextPrimary;
+      }
+
+      &.strike::after {
+        background-color: $white;
+      }
+    }
+
+    &.strike::after {
+      content: "";
+      position: absolute;
+      top: 0.75rem;
+      left: 4px;
+      width: 80%;
+      height: 2px;
+      background-color: $colorTextPrimary;
+    }
+  }
+}

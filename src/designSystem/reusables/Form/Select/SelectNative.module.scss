@@ -1,0 +1,21 @@
+@import "src/designSystem/css/theme.scss";
+
+.select {
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  background-color: white;
+  border: 1px solid $colorBorderInput;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  cursor: text;
+
+  .option {
+    border: none;
+    cursor: pointer;
+
+    :hover {
+      color: red;
+    }
+  }
+}

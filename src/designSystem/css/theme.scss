@@ -1,0 +1,111 @@
+@import "./reset.scss";
+
+/* ===== Color Setting ===== **/
+
+$white: #fefefe;
+$colorBrandPrimary: #15ba30;
+$colorBrandPrimaryMuted: #0ca225;
+$colorBrandPrimaryHover: #25c33f;
+$colorGradientEnd: #357d5b;
+$colorTextPrimary: #474747;
+$colorTextSecondary: #636363;
+$colorTextPlaceholder: #9d9d9d;
+$colorBgMenuActive: #fafafa;
+$colorBgMenuHover: #fcfcfc;
+$colorBorder: #efefef;
+$colorBorderInput: #d6d6d6;
+$colorWarning: #eeba0d;
+$colorDanger: #f46141;
+
+/* ===== End Color Setting ===== **/
+
+/* ===== Text Size ===== **/
+
+$textXS: 10px;
+$textSm: 12px;
+$textBase: 14px;
+$textMd: 16px;
+$textLg: 20px;
+$textXl: 24px;
+$text2Xl: 32px;
+$text3Xl: 48px;
+
+/* ===== End Text Size ===== **/
+
+$borderRadius: 12px;
+
+/* ==== Responsive Breakpoints ==== **/
+
+//Small smartphones
+$screen-xs-min: 100px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 378px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Extra Small devices
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen) {
+    @content;
+  }
+}
+
+/* ==== End Responsive Breakpoints ==== **/
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: $colorBorder;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $colorBorderInput;
+  border-radius: 20px;
+}

@@ -1,0 +1,45 @@
+@import "src/designSystem/css/theme.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .menu {
+    color: $colorTextPlaceholder;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: medium;
+
+    transition: all;
+    transition-duration: 100ms;
+
+    .menu-item {
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
+    &.active {
+      color: $colorBrandPrimary;
+      font-weight: 700;
+      background-color: $colorBgMenuActive;
+    }
+
+    .child {
+      border-left: 1px solid $colorBorder;
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      color: $colorBrandPrimary;
+      background-color: $colorBgMenuHover;
+    }
+  }
+}

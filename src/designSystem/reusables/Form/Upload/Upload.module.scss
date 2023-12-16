@@ -1,0 +1,57 @@
+@import "src/designSystem/css/theme.scss";
+
+.upload {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $colorBgMenuHover;
+  border: 2px dashed $colorBorder;
+  border-radius: $borderRadius;
+  &.error {
+    border-color: $colorDanger;
+  }
+
+  :global(.ant-upload) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  color: $colorTextPlaceholder;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: inherit;
+
+  .icon {
+    font-size: 4rem;
+    color: $colorBrandPrimary;
+  }
+
+  .placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .helper {
+    font-size: 0.75rem;
+    font-weight: 300;
+
+    &.error {
+      color: $colorDanger;
+      font-weight: 400;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+  }
+}

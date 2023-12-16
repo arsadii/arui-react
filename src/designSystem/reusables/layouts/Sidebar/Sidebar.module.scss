@@ -1,0 +1,25 @@
+@import "src/designSystem/css/theme.scss";
+
+.custom-sider {
+  background-color: white;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  .menu-container {
+    padding: 1rem 1rem;
+  }
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  height: 4rem;
+  padding: 3rem 2rem;
+
+  @include md {
+    position: sticky;
+  }
+}

@@ -1,0 +1,15 @@
+@import "src/designSystem/css/theme.scss";
+
+.custom-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  padding: 1rem;
+  overflow-y: auto;
+
+  @include md {
+    padding: 1rem 2rem;
+  }
+}

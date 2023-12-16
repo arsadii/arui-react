@@ -1,0 +1,14 @@
+@import "src/designSystem/css/theme.scss";
+
+.picture-img {
+  width: 100px !important;
+  border-radius: 50%;
+}
+
+.action-btn {
+  margin-top: -1.5rem;
+}
+
+.error-helper {
+  color: $colorDanger;
+}

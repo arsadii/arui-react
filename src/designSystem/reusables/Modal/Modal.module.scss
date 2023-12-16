@@ -1,0 +1,16 @@
+@import "src/designSystem/css/theme.scss";
+
+.ok-button {
+  background-color: $colorBrandPrimary;
+
+  &:hover {
+    background-color: $colorBrandPrimaryHover !important;
+  }
+}
+
+.cancel-button {
+  &:hover {
+    border-color: $colorBrandPrimary !important;
+    color: $colorBrandPrimary !important;
+  }
+}
